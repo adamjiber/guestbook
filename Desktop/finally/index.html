@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Länk till CSS-filen -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">  
+    <!-- Formulär -->
+    <form id="contact" action="/submit" method="post"> <!-- action attributet pekar på /submit som är routen på servern -->
+      <h3>Quick Contact</h3>
+      <h4>Contact us today, and get a reply within 24 hours!</h4>
+      <!-- Namngivna input-fält -->
+      <fieldset>
+        <input placeholder="Your name" type="text" name="name" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Your Email Address" type="email" name="email" tabindex="2" required>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Your Phone Number" type="tel" name="phonenumber" tabindex="3" required>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Your Web Site starts with http://" type="url" name="homepage" tabindex="4" required>
+      </fieldset>
+      <fieldset>
+        <textarea placeholder="Type your Message Here...." name="message" tabindex="5" required></textarea>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+  <div class="post"></div>
+  <!-- Länk till JavaScript-filen -->
+  <script src="server.js"></script>
+</body>
+</html>
